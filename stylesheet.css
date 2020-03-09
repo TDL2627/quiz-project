@@ -4,6 +4,7 @@ h1 {
     font-size: 60px;
 }
 body {
+    
     background-color: limegreen;
 }
 @keyframes example {
@@ -27,8 +28,12 @@ body {
     animation-iteration-count: infinite;
   }
   center{
+      margin-left: 10%;
       background-color: linen;
-      
+      border-style: groove;
+      border-width: 20px;
+      border-color: mediumspringgreen;
+      max-width: 1060px;
       width:100%;
   }
   /* Media Queries: Tablet Landscape */
@@ -42,4 +47,7 @@ body {
     #primary { width:100%; }
     #secondary { width:100%; margin:0; border:none; }
 }
-
+p {
+    font-size: 25px;
+    font-family: 'Shadows Into Light', cursive;
+}
