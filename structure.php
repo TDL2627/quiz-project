@@ -195,7 +195,11 @@ if ($question==0){
         }
 ?>
 
-<HTML><HEAD><TITLE>RIDDLES TRIVIA <?php print $title; ?></TITLE>
+<HTML>
+<HEAD>
+<link rel="stylesheet" href="stylesheet.css">
+
+<TITLE>RIDDLES TRIVIA <?php print $title; ?></TITLE>
 
 <SCRIPT LANGUAGE='JavaScript'>
 
@@ -231,7 +235,7 @@ function Goahead (number){
 <TR><TD ALIGN=RIGHT>
 <FORM METHOD=POST NAME="percentage" ACTION="<?php print $URL; ?>">
 
-<BR>Percentage of correct responses: <?php print $percentage; ?> %
+
 <BR><input type=submit value="Next >>">
 <input type=hidden name=response value=0>
 <input type=hidden name=question value=<?php print $question; ?>>
@@ -262,9 +266,15 @@ function Goahead (number){
 }else{
 ?>
 <TR><TD ALIGN=Center>
-The Quiz has finished
+<P>WELL DONE ON COMPLETING THE QUIZ</P>
 <BR>Percentage of correct responses: <?php print $percentage ; ?> %
-
+<P>EVERY 5% IS 1 POINT</P>
+<ul>
+  <li>25% AND LESS=FAILURE</li>
+  <li>25%-50%=YOU TRIED</li>
+  <li>50%-80%=COOL YOU PASSED</li>
+  <li>80%-100%=EXECELLENT,YOU'RE AWESOME</li>
+</ul>
 
 <?php } ?>
 
@@ -272,5 +282,7 @@ The Quiz has finished
 </TABLE>
 
 </CENTER>
+
+
 </BODY>
 </HTML>
