@@ -198,6 +198,9 @@ if ($question==0){
 <HTML>
 <HEAD>
 <link rel="stylesheet" href="stylesheet.css">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
 
 <TITLE>RIDDLES TRIVIA <?php print $title; ?></TITLE>
 
@@ -265,6 +268,7 @@ function Goahead (number){
 <?php
 }else{
 ?>
+
 <TR><TD ALIGN=Center>
 <P>WELL DONE ON COMPLETING THE QUIZ</P>
 <BR>Percentage of correct responses: <?php print $percentage ; ?> %
@@ -276,6 +280,7 @@ function Goahead (number){
   <li>80%-100%=EXECELLENT,YOU'RE AWESOME</li>
 </ul>
 
+
 <?php } ?>
 
 </TD></TR>
@@ -284,5 +289,7 @@ function Goahead (number){
 </CENTER>
 
 
+<footer>DEVELOPED BY TDL2627</footer>
 </BODY>
+
 </HTML>
