@@ -271,7 +271,7 @@ function Goahead (number){
 
 <TR><TD ALIGN=Center>
 <P>WELL DONE ON COMPLETING THE QUIZ</P>
-<BR>Percentage of correct responses: <?php print $percentage ; ?> %
+<BR><p class="result">Percentage of correct responses:</p> <?php print $percentage ; ?> %
 <P>EVERY 5% IS 1 POINT</P>
 <ul>
   <li>25% AND LESS=FAILURE</li>

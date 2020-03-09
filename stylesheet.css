@@ -2,14 +2,20 @@
 h1 {
     font-family:  'Shadows Into Light', cursive;
     font-size: 60px;
+    animation-name:flip-scale-up-hor;
+    animation-duration: 2s;
+    
 }
 body {
-    
+   
     background-color: limegreen;
+   
 }
 @keyframes example {
-    from {background-color: red;}
-    to {background-color: yellow;}
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
   }
   
   /* The element to apply the animation to */
@@ -29,12 +35,14 @@ body {
   }
   center{
       margin-left: 10%;
+      margin-right:10%;
       background-color: linen;
       border-style: groove;
       border-width: 20px;
-      border-color: mediumspringgreen;
-      max-width: 1060px;
-      width:100%;
+      border-color: black;
+      max-width: 80%;
+      width:80%;
+
   }
   /* Media Queries: Tablet Landscape */
 @media screen and (max-width: 1060px) {
@@ -42,12 +50,55 @@ body {
     #secondary { width:30%; margin-left:3%;}  
 }
 
-/* Media Queries: Tabled Portrait */
+
 @media screen and (max-width: 768px) {
     #primary { width:100%; }
-    #secondary { width:100%; margin:0; border:none; }
+    #secondary { width:100%; margin:3%; border:none; margin-right: 3%;}
 }
 p {
     font-size: 25px;
     font-family: 'Shadows Into Light', cursive;
 }
+.result{
+    font-size: 40px;
+    color: limegreen;
+}
+table{
+    
+    margin-right: 15%;
+    max-width: 80%;
+    width:80%;
+}
+.flip-scale-up-hor {
+	-webkit-animation: flip-scale-up-hor 0.5s linear both;
+	        animation: flip-scale-up-hor 0.5s linear both;
+}
+@-webkit-keyframes flip-scale-up-hor {
+    0% {
+      -webkit-transform: scale(1) rotateX(0);
+              transform: scale(1) rotateX(0);
+    }
+    50% {
+      -webkit-transform: scale(2.5) rotateX(-90deg);
+              transform: scale(2.5) rotateX(-90deg);
+    }
+    100% {
+      -webkit-transform: scale(1) rotateX(-180deg);
+              transform: scale(1) rotateX(-180deg);
+    }
+  }
+  @keyframes flip-scale-up-hor {
+    0% {
+      -webkit-transform: scale(1) rotateX(0);
+              transform: scale(1) rotateX(0);
+    }
+    50% {
+      -webkit-transform: scale(2.5) rotateX(-90deg);
+              transform: scale(2.5) rotateX(-90deg);
+    }
+    100% {
+      -webkit-transform: scale(1) rotateX(-180deg);
+              transform: scale(1) rotateX(-180deg);
+    }
+  }
+  
