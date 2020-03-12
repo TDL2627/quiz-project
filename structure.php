@@ -1,11 +1,11 @@
 <?php
 error_reporting(0);
 
-
+// beginning of code
 $title = "ENIGMA-THE RIDDLE QUIZ";
 
 $randomizequestions ="yes"; 
-
+// questions
 $a = array(
 1 => array(
    0 => "What's nowhere but everywhere, except where something is?",
@@ -195,16 +195,16 @@ if ($question==0){
         }
 ?>
 
-<HTML>
-<HEAD>
+<html>
+<head>
 <link rel="stylesheet" href="stylesheet.css">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="HandheldFriendly" content="true">
 
-<TITLE>RIDDLES TRIVIA <?php print $title; ?></TITLE>
+<title>RIDDLES TRIVIA <?php print $title; ?></title>
 
-<SCRIPT LANGUAGE='JavaScript'>
+<script LANGUAGE='JavaScript'>
 
 function Goahead (number){
         if (document.percentage.response.value==0){
@@ -224,54 +224,54 @@ function Goahead (number){
         }
 }
 
-</SCRIPT>
+</script>
 
-</HEAD>
-<BODY >
+</head>
+<body>
 
-<CENTER>
-<H1><?php print "$title"; ?></H1>
-<TABLE BORDER=0 CELLSPACING=5 WIDTH=500>
+<center>
+<h1><?php print "$title"; ?></h1>
+<table BORDER=0 CELLSPACING=5 WIDTH=500>
 
 <?php if ($question<$max){ ?>
 
-<TR><TD ALIGN=RIGHT>
-<FORM METHOD=POST NAME="percentage" ACTION="<?php print $URL; ?>">
+<tr><td ALIGN=RIGHT>
+<form METHOD=POST NAME="percentage" ACTION="<?php print $URL; ?>">
 
 
-<BR><input type=submit value="Next >>">
+<br><input type=submit value="Next >>">
 <input type=hidden name=response value=0>
 <input type=hidden name=question value=<?php print $question; ?>>
 <input type=hidden name=ok value=<?php print $ok; ?>>
 <input type=hidden name=Randon value=<?php print $randval; ?>>
 <br><?php print $question+1; ?> / <?php print $max; ?>
-</FORM>
+</form>
 <HR>
-</TD></TR>
+</td></tr>
 
-<TR><TD>
-<FORM METHOD=POST NAME="question" ACTION="">
+<tr><td>
+<form METHOD=POST NAME="question" ACTION="">
 <?php print "<b>".$a[$randval2][0]."</b>"; ?>
  
-<BR>     <INPUT TYPE=radio NAME="option" VALUE="1"  onClick=" Goahead (1);"><?php print $a[$randval2][1] ; ?>
-<BR>     <INPUT TYPE=radio NAME="option" VALUE="2"  onClick=" Goahead (2);"><?php print $a[$randval2][2] ; ?>
+<br>     <input TYPE=radio NAME="option" VALUE="1"  onClick=" Goahead (1);"><?php print $a[$randval2][1] ; ?>
+<br>     <input TYPE=radio NAME="option" VALUE="2"  onClick=" Goahead (2);"><?php print $a[$randval2][2] ; ?>
 <?php if ($a[$randval2][3]!=""){ ?>
-<BR>     <INPUT TYPE=radio NAME="option" VALUE="3"  onClick=" Goahead (3);"><?php print $a[$randval2][3] ; } ?>
+<br>     <input TYPE=radio NAME="option" VALUE="3"  onClick=" Goahead (3);"><?php print $a[$randval2][3] ; } ?>
 <?php if ($a[$randval2][4]!=""){ ?>
-<BR>     <INPUT TYPE=radio NAME="option" VALUE="4"  onClick=" Goahead (4);"><?php print $a[$randval2][4] ; } ?>
+<br>     <input TYPE=radio NAME="option" VALUE="4"  onClick=" Goahead (4);"><?php print $a[$randval2][4] ; } ?>
 <?php if ($a[$randval2][5]!=""){ ?>
-<BR>     <INPUT TYPE=radio NAME="option" VALUE="5"  onClick=" Goahead (5);"><?php print $a[$randval2][5] ; } ?>
+<br>     <input TYPE=radio NAME="option" VALUE="5"  onClick=" Goahead (5);"><?php print $a[$randval2][5] ; } ?>
 
 
-</FORM>
+</form>
 
 <?php
 }else{
 ?>
 
-<TR><TD ALIGN=Center>
+<tr><td ALIGN=Center>
 <P>WELL DONE ON COMPLETING THE QUIZ</P>
-<BR><p class="result">Percentage of correct responses:</p> <?php print $percentage ; ?> %
+<br><p class="result">Percentage of correct responses:</p> <?php print $percentage ; ?> %
 <P>EVERY 5% IS 1 POINT</P>
 <ul>
   <li>25% AND LESS=FAILURE</li>
@@ -283,13 +283,13 @@ function Goahead (number){
 
 <?php } ?>
 
-</TD></TR>
-</TABLE>
+</td></tr>
+</table>
 
-</CENTER>
+</center>
 
 
 <footer>DEVELOPED BY TDL2627</footer>
-</BODY>
+</body>
 
-</HTML>
+</html>
