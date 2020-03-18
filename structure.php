@@ -239,7 +239,7 @@ function Goahead (number){
 <form METHOD=POST NAME="percentage" ACTION="<?php print $URL; ?>">
 
 
-<br><input type=submit value="Next >>" style="padding-right=15%;">
+<br><input type=submit value="Next >>" style="padding-right=30%;">
 <input type=hidden name=response value=0>
 <input type=hidden name=question value=<?php print $question; ?>>
 <input type=hidden name=ok value=<?php print $ok; ?>>

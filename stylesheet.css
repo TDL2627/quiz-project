@@ -61,6 +61,7 @@ p {
     
 }
 .result{
+  font-family:  'Shadows Into Light', cursive;
     font-size: 40px;
     color: limegreen;
     animation-name:shadow-pop-tr;
@@ -68,7 +69,7 @@ p {
     animation-iteration-count:infinite ;
 }
 table{
-    
+  font-family:  'Shadows Into Light', cursive;
     margin-right: 15%;
     max-width: 80%;
     width:80%;
